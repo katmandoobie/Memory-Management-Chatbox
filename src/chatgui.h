@@ -6,6 +6,7 @@
 
 class ChatLogic; // forward declaration
 
+
 // middle part of the window containing the dialog between user and chatbot
 class ChatBotPanelDialog : public wxScrolledWindow
 {
