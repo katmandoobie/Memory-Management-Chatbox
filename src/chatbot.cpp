@@ -42,7 +42,7 @@ ChatBot::~ChatBot()
     }
 }
 
-//// STUDENT CODE
+
 ChatBot::ChatBot(const ChatBot &source){ // copy constructor
     std::cout << "Chatbot Copy Constructor" << "\n";
    
@@ -54,7 +54,7 @@ ChatBot::ChatBot(const ChatBot &source){ // copy constructor
     
 }
 
-ChatBot &ChatBot::operator=(const ChatBot &source)
+ChatBot &ChatBot::operator=(const ChatBot &source)//operation overload copy 
 {
      std::cout << "Chatbot Copy Assignment" << "\n";
      if(this == &source)
@@ -68,7 +68,7 @@ ChatBot &ChatBot::operator=(const ChatBot &source)
     return *this;
 }
 
-ChatBot::ChatBot(ChatBot&& source) 
+ChatBot::ChatBot(ChatBot&& source) //move constructor
 {
     std::cout << "move cosntructor\n";
     _image = source._image;
@@ -84,7 +84,7 @@ ChatBot::ChatBot(ChatBot&& source)
     source._image = NULL;
 }
 
-ChatBot &ChatBot::operator=(ChatBot &&source)
+ChatBot &ChatBot::operator=(ChatBot &&source)//move assignment operatior
 {
     std::cout << "move assignment operator\n";
     if(this == &source)
@@ -106,8 +106,7 @@ ChatBot &ChatBot::operator=(ChatBot &&source)
     return *this;
 }
 
-////
-//// EOF STUDENT CODE
+
 
 void ChatBot::ReceiveMessageFromUser(std::string message)
 {
